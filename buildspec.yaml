@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo installing nodejs...
+      - echo "install nodejs"
+  pre_build:
+    commands:
+      - echo installing dependencies...
+      - npm install
+  build:
+    commands:
+      - echo "build complete"
+  post_build:
+    commands:
+      - mv appspec.yml ./dist/learning-app
+      - mv deploy ./dist/learning-app
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist/learning-app
