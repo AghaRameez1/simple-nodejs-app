@@ -16,10 +16,9 @@ phases:
       - echo "build complete"
   post_build:
     commands:
-      - mv appspec.yml ./dist/learning-app
-      - mv deploy ./dist/learning-app
+      - mv / /
 artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/learning-app
+  base-directory: /nodejs
