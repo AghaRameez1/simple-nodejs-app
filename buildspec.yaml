@@ -14,9 +14,6 @@ phases:
   build:
     commands:
       - echo "build complete"
-  post_build:
-    commands:
-      - mv / /
 artifacts:
   files:
     - "**/*"
