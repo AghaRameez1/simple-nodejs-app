@@ -14,4 +14,4 @@ hooks:
   Install:
     - location: deploy/start.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
