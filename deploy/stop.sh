@@ -1,4 +1,5 @@
 #!/bin/bash
 
 
-sudo echo "this will run" > text.txt
+sudo echo "$pwd" > text.txt
+chmod +x /deploy/start.sh
