@@ -1,16 +1,21 @@
 version: 0.0
 os: linux
 files:
-  # unzip the build artifact in ~/app
+  # unzip the build artifact in ~/nodejs
   - source: /
     destination: /home/ubuntu/nodejs
+    overwrite: true
 permissions:
-  # change permissions from root to ec2-user
+  # change permissions from root to ubuntu
   - object: /home/ubuntu/nodejs
     pattern: "**"
     owner: ubuntu
     group: ubuntu
 hooks:
+  BeforeInstall: 
+    - location : deploy/stop.sh
+      timeout: 300
+      runas: ubuntu
   Install:
     - location: deploy/start.sh
       timeout: 300
