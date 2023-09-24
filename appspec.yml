@@ -5,12 +5,6 @@ files:
   - source: /
     destination: /home/ubuntu/nodejs
     overwrite: true
-permissions:
-  # change permissions from root to ubuntu
-  - object: /home/ubuntu/nodejs
-    pattern: "**"
-    owner: ubuntu
-    group: ubuntu
 hooks:
   BeforeInstall: 
     - location : deploy/stop.sh
