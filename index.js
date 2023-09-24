@@ -4,7 +4,7 @@ const request = require('request');
 const wikip = require('wiki-infobox-parser');
 const path = require("path");
 
-server.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views"));
 //ejs
 app.set("view engine", 'ejs');
 

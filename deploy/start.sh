@@ -1,5 +1,5 @@
 #!/bin/bash
-cd nodejs
+cd /home/ubuntu/nodejs
 
 pm2 delete node-app
 
