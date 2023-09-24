@@ -6,11 +6,7 @@ files:
     destination: /home/ubuntu/nodejs
     overwrite: true
 hooks:
-  BeforeInstall: 
-    - location : deploy/stop.sh
-      timeout: 300
-      runas: root
   Install:
-    - location: deploy/start_up.sh
+    - location : deploy/stop.sh
       timeout: 300
       runas: root
