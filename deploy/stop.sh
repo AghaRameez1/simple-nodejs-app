@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-echo "this will run" > text.txt
+sudo echo "this will run" > text.txt

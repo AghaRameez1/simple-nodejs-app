@@ -1,8 +1,6 @@
 #!/bin/bash
-cd /home/ubuntu/nodejs
+sudo pm2 delete node-app
 
-pm2 delete node-app
+sudo pm2 start index.js --name node-app
 
-pm2 start /home/ubuntu/index.js --name node-app
-
-pm2 save
+sudo pm2 save
