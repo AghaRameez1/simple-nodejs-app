@@ -1,6 +1,5 @@
 #!/bin/bash
-sudo pm2 delete node-app
-
-sudo pm2 start index.js --name node-app
-
-sudo pm2 save
+pm2 delete node-app
+cd ..
+pm2 start index.js --name node-app
+ pm2 save
